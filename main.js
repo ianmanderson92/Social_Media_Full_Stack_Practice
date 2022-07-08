@@ -14,7 +14,7 @@ const { render } = require("ejs");
 const express = require("express"),
   app = express(),
   router = express.Router(),
-  //router = require("./routes/index"), FOR WHEN WE GET /routes WORKING
+  router = require("./routes/index"), //Some routes still need fixing
   layouts = require("express-ejs-layouts"),
   mongoose = require("mongoose"),
   methodOverride = require("method-override"),
@@ -24,7 +24,7 @@ const express = require("express"),
   expressValidator = require("express-validator"),
   morgan = require("morgan"),
   passport = require("passport"),
-  //errorController = require("./controllers/errorController");
+  errorController = require("./controllers/errorController");
   usersController = require("./controllers/usersController"),
   homeController = require("./controllers/homeController"),
   postsController = require("./controllers/postsController"),
@@ -146,8 +146,8 @@ router.get("/users/:id/addFriend", usersController.addFriend, usersController.sh
 router.get("/users/:id/removeFriend", usersController.removeFriend, usersController.showCurrUserPage, usersController.showViewUserPage);
 router.get("/users/:id/home", usersController.showHome, usersController.showViewHome);
 
-//router.use(errorController.respondNoResourceFound);
-//router.use(errorController.respondInternalError);
+router.use(errorController.respondNoResourceFound);
+router.use(errorController.respondInternalError);
 
 router.get("")
 

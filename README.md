@@ -91,7 +91,8 @@ npm start
 
 Then the site will be up and running on localhost at port 3000.
 
-The site is also hosted at https://glacial-peak-73293.herokuapp.com/
+The site is also hosted at https://glacial-peak-73293.herokuapp.com/  !!Currently the hosted site is not working properly as all Queries timeout!!
+The website will be updated and re-hosted soon
 
 ## Breakdown of responsibilities (as of May 2021)
 
